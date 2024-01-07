@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjbxvxoa2xycb"]
+
+[ext_resource type="Texture2D" uid="uid://dfaapk5j3nqvj" path="res://images/background.jpg" id="1_230lg"]
+[ext_resource type="Texture2D" uid="uid://dsllrmtre72hi" path="res://images/crate.png" id="2_om6ul"]
+[ext_resource type="Texture2D" uid="uid://cryktfmqlwpwq" path="res://images/blue_bottle.png" id="3_kq2xe"]
+[ext_resource type="Texture2D" uid="uid://c6nvgkdvkrbjm" path="res://images/red_bottle.png" id="4_y3ci3"]
+
+[node name="Arena" type="CanvasLayer"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_230lg")
+
+[node name="PlayerStatsCrate" type="TextureRect" parent="."]
+offset_top = 536.0
+offset_right = 176.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("2_om6ul")
+expand_mode = 1
+
+[node name="EnemyStatsCrate" type="TextureRect" parent="."]
+offset_left = 976.0
+offset_top = 536.0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 8
+texture = ExtResource("2_om6ul")
+expand_mode = 1
+
+[node name="PlayerEnergyMarker" type="TextureRect" parent="."]
+offset_top = 488.0
+offset_right = 512.0
+offset_bottom = 1000.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_kq2xe")
+
+[node name="EnemyEnergyMarker" type="TextureRect" parent="."]
+offset_left = 1096.0
+offset_top = 488.0
+offset_right = 1608.0
+offset_bottom = 1000.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_kq2xe")
+
+[node name="PlayerHealthMarker" type="TextureRect" parent="."]
+offset_left = 120.0
+offset_top = 488.0
+offset_right = 632.0
+offset_bottom = 1000.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_y3ci3")
+
+[node name="EnemyHealthMarker" type="TextureRect" parent="."]
+offset_left = 976.0
+offset_top = 488.0
+offset_right = 1488.0
+offset_bottom = 1000.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_y3ci3")

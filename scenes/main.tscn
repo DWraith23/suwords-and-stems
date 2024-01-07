@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://c08pl1mk5fig4"]
+
+[ext_resource type="PackedScene" uid="uid://bjbxvxoa2xycb" path="res://scenes/arena.tscn" id="1_4s85g"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fwwbv"]
+[ext_resource type="PackedScene" uid="uid://chyklpl2ee22s" path="res://scenes/hud.tscn" id="2_uv0oj"]
+[ext_resource type="PackedScene" uid="uid://dnpd56bpg5nq" path="res://scenes/player.tscn" id="3_36vil"]
+[ext_resource type="PackedScene" uid="uid://rpqadeit5jlq" path="res://scenes/enemy.tscn" id="4_rnrq0"]
+[ext_resource type="PackedScene" uid="uid://dtlxbfqr5o1qf" path="res://scenes/combat.tscn" id="6_on7b6"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_fwwbv")
+
+[node name="Arena" parent="." instance=ExtResource("1_4s85g")]
+layer = -1
+
+[node name="HUD" parent="." instance=ExtResource("2_uv0oj")]
+
+[node name="Player" parent="." instance=ExtResource("3_36vil")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_rnrq0")]
+
+[node name="Combat" parent="." instance=ExtResource("6_on7b6")]
+
+[connection signal="enemy_turn" from="." to="." method="_on_enemy_turn"]
+[connection signal="act_1" from="HUD" to="." method="_on_hud_act_1"]
+[connection signal="act_2" from="HUD" to="." method="_on_hud_act_2"]
+[connection signal="act_3" from="HUD" to="." method="_on_hud_act_3"]
+[connection signal="act_4" from="HUD" to="." method="_on_hud_act_4"]
+[connection signal="act_5" from="HUD" to="." method="_on_hud_act_5"]
+[connection signal="act_6" from="HUD" to="." method="_on_hud_act_6"]
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]
+[connection signal="dead" from="Enemy" to="." method="_on_enemy_dead"]
+[connection signal="damage_dealt" from="Combat" to="." method="_on_combat_damage_dealt"]
+[connection signal="energy_recovery" from="Combat" to="." method="_on_combat_energy_recovery"]
+[connection signal="energy_used" from="Combat" to="." method="_on_combat_energy_used"]
+[connection signal="forced_movement" from="Combat" to="." method="_on_combat_forced_movement"]
+[connection signal="health_recovery" from="Combat" to="." method="_on_combat_health_recovery"]
+[connection signal="missed" from="Combat" to="." method="_on_combat_missed"]
+[connection signal="movement" from="Combat" to="." method="_on_combat_movement"]
+[connection signal="recovery" from="Combat" to="." method="_on_combat_recovery"]

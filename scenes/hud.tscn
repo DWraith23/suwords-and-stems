@@ -1,0 +1,213 @@
+[gd_scene load_steps=4 format=3 uid="uid://chyklpl2ee22s"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_6iuej"]
+[ext_resource type="Theme" uid="uid://c6kf6qb81cda6" path="res://themes/comic_sans.tres" id="1_xrn0b"]
+[ext_resource type="Texture2D" uid="uid://cibr7g3xu7xu8" path="res://images/Circle.png" id="3_34cv0"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_6iuej")
+
+[node name="PlayerEnergy" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 450.0
+offset_right = 76.0
+offset_bottom = 486.0
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0.545098, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "999/999"
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 450.0
+offset_right = 179.0
+offset_bottom = 486.0
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0.545098, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "999/999"
+
+[node name="EnemyEnergy" type="Label" parent="."]
+offset_left = 1080.0
+offset_top = 450.0
+offset_right = 1151.0
+offset_bottom = 486.0
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(1, 0.196078, 0.145098, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "999/999"
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 970.0
+offset_top = 450.0
+offset_right = 1041.0
+offset_bottom = 486.0
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(1, 0.196078, 0.145098, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "999/999"
+
+[node name="ActionsLabel" type="Label" parent="."]
+offset_top = 10.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.572549, 0.572549, 0.572549, 1)
+text = "Actions"
+
+[node name="ActionButton1" type="Button" parent="."]
+offset_top = 30.0
+offset_right = 1208.0
+offset_bottom = 1238.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="ActionButton2" type="Button" parent="."]
+offset_top = 80.0
+offset_right = 1208.0
+offset_bottom = 1288.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="ActionButton3" type="Button" parent="."]
+offset_top = 130.0
+offset_right = 1208.0
+offset_bottom = 1338.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="ActionButton4" type="Button" parent="."]
+offset_top = 180.0
+offset_right = 1208.0
+offset_bottom = 1388.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="ActionButton5" type="Button" parent="."]
+offset_top = 230.0
+offset_right = 1208.0
+offset_bottom = 1438.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="ActionButton6" type="Button" parent="."]
+offset_top = 280.0
+offset_right = 1208.0
+offset_bottom = 1488.0
+scale = Vector2(0.05, 0.05)
+icon = ExtResource("3_34cv0")
+flat = true
+
+[node name="StemDistance" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 30.0
+offset_right = 91.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+text = "Stem-to-Stem Distance:"
+
+[node name="TempLabel1" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 187.0
+offset_bottom = 74.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="TempLabel2" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 100.0
+offset_right = 187.0
+offset_bottom = 124.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="TempLabel3" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 150.0
+offset_right = 187.0
+offset_bottom = 174.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="TempLabel4" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 200.0
+offset_right = 187.0
+offset_bottom = 224.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="TempLabel5" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 250.0
+offset_right = 187.0
+offset_bottom = 274.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="TempLabel6" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 300.0
+offset_right = 187.0
+offset_bottom = 324.0
+theme = ExtResource("1_xrn0b")
+text = "TEMPORARY"
+
+[node name="ActionLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -224.0
+offset_right = 30.5
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Action!"
+
+[node name="ActionLabel2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -194.0
+offset_right = 31.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xrn0b")
+theme_override_colors/font_color = Color(0.976471, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Action!"
+
+[connection signal="pressed" from="ActionButton1" to="." method="_on_act_1"]
+[connection signal="pressed" from="ActionButton2" to="." method="_on_act_2"]
+[connection signal="pressed" from="ActionButton3" to="." method="_on_act_3"]
+[connection signal="pressed" from="ActionButton4" to="." method="_on_act_4"]
+[connection signal="pressed" from="ActionButton5" to="." method="_on_act_5"]
+[connection signal="pressed" from="ActionButton6" to="." method="_on_act_6"]

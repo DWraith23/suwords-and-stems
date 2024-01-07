@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://rpqadeit5jlq"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_10bxf"]
+[ext_resource type="Texture2D" uid="uid://co7jlcdql13f1" path="res://images/cloverchad.png" id="1_77f6j"]
+[ext_resource type="Texture2D" uid="uid://254e1nvwkufi" path="res://images/helmet2.png" id="2_t6lkl"]
+[ext_resource type="Texture2D" uid="uid://cv772byac4ccw" path="res://images/sword.png" id="3_30kiv"]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_10bxf")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(880, 564)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_77f6j")
+flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Body"]
+
+[node name="Upper Leaf Protector" type="Sprite2D" parent="."]
+position = Vector2(887.314, 475.25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_t6lkl")
+flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Upper Leaf Protector"]
+
+[node name="Lower Leaf Protector" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lower Leaf Protector"]
+
+[node name="Mouth Guard" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Mouth Guard"]
+
+[node name="Stem Guard" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Stem Guard"]
+
+[node name="Eye Protection" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Eye Protection"]
+
+[node name="Shield" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Shield"]
+
+[node name="Weapon" type="Sprite2D" parent="Shield"]
+position = Vector2(831.314, 552.25)
+rotation = 1.65981
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_30kiv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Shield/Weapon"]

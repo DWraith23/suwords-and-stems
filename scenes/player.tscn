@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnpd56bpg5nq"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_h00jy"]
+[ext_resource type="Texture2D" uid="uid://co7jlcdql13f1" path="res://images/cloverchad.png" id="1_yiqx7"]
+[ext_resource type="Texture2D" uid="uid://yd5uwlu5hav3" path="res://images/helmet.png" id="2_uiwry"]
+[ext_resource type="Texture2D" uid="uid://biw1g4mg7g50o" path="res://images/spear.png" id="3_0xiji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68uu2"]
+size = Vector2(484.849, 509.091)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_h00jy")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(272, 564)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_yiqx7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Body"]
+
+[node name="Upper Leaf Protector" type="Sprite2D" parent="."]
+position = Vector2(253.375, 477.375)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_uiwry")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Upper Leaf Protector"]
+
+[node name="Lower Leaf Protector" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lower Leaf Protector"]
+
+[node name="Mouth Guard" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Mouth Guard"]
+
+[node name="Eye Protection" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Eye Protection"]
+
+[node name="Shield" type="Sprite2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Shield"]
+
+[node name="Weapon" type="Sprite2D" parent="."]
+position = Vector2(317.375, 557.375)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("3_0xiji")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Weapon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(272, 564)
+scale = Vector2(0.33, 0.33)
+shape = SubResource("RectangleShape2D_68uu2")

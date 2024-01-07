@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c6kf6qb81cda6"]
+
+[ext_resource type="FontFile" uid="uid://0h0ucbgxbymb" path="res://fonts/Ldfcomicsans-jj7l.ttf" id="1_27p4h"]
+
+[resource]
+default_font = ExtResource("1_27p4h")
+default_font_size = 20
