@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtlxbfqr5o1qf"]
+[gd_scene load_steps=4 format=3 uid="uid://dtlxbfqr5o1qf"]
 
 [ext_resource type="Script" path="res://scripts/combat.gd" id="1_eaorl"]
+[ext_resource type="Script" path="res://scripts/combat.round.gd" id="2_tajpa"]
+[ext_resource type="Script" path="res://scripts/combat.action.gd" id="3_tsihd"]
 
 [node name="Combat" type="Node"]
 script = ExtResource("1_eaorl")
+
+[node name="Round" type="Node" parent="."]
+script = ExtResource("2_tajpa")
+
+[node name="Action" type="Node" parent="."]
+script = ExtResource("3_tsihd")

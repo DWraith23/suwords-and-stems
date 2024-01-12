@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://mtwssw5dqce3"]
+[gd_scene load_steps=4 format=3 uid="uid://mtwssw5dqce3"]
 
 [ext_resource type="Script" path="res://scripts/gladiator.gd" id="1_htqd7"]
+[ext_resource type="Script" path="res://scripts/gladiator.weapon.gd" id="2_kvnio"]
+[ext_resource type="Script" path="res://scripts/gladiator.armor.gd" id="3_e2xvs"]
 
-[node name="Gladiator" type="Node2D"]
+[node name="Gladiator" type="Node"]
 script = ExtResource("1_htqd7")
+
+[node name="Weapon" type="Node" parent="."]
+script = ExtResource("2_kvnio")
+
+[node name="Armor" type="Node" parent="."]
+script = ExtResource("3_e2xvs")
